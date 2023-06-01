@@ -1,9 +1,7 @@
 import express from "express";
 import data from "./data.js";
 import bodyParser from "body-parser";
-import serverless from "serverless-http";
 
-const router = express.Router();
 const app = express(); // Cria uma instância do Express
 app.use(bodyParser.json());
 
@@ -62,10 +60,6 @@ app.delete("/api/produtos/:id", function (req, res) {
 const port = process.env.PORT || 3000;
 const server = "127.0.0.1";
 
-module.exports = app;
-app.use(`/.netlify/functions/api`, router);
-module.exports.handler = serverless(app);
-/* app.listen(port, function () {
+app.listen(port, function () {
   console.log(`Servidor rodando em http://${server}:${port}`);
 });
- */
