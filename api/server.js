@@ -4,6 +4,11 @@ import bodyParser from "body-parser";
 
 const app = express(); // Cria uma instância do Express
 app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
 
 app.get("/", function (req, res) {
   res.send("Servidor rodando com Express");
@@ -53,6 +58,13 @@ app.delete("/api/produtos/:id", function (req, res) {
   }
 });
 
+app.use((err, req, res, next) => {
+  const statusCode = err.statusCode || 500;
+  console.error(err.message, err.stack);
+  res.status(statusCode).json({'message': err.message});
+  
+  return;
+});
 
 
 
