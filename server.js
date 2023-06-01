@@ -5,6 +5,10 @@ import bodyParser from "body-parser";
 const app = express(); // Cria uma instância do Express
 app.use(bodyParser.json());
 
+app.get("/", function (req, res) {
+  res.send("Servidor rodando com Express");
+});
+
 app.get("/api/produtos", function (req, res) {
   res.json(data);
 });
@@ -52,6 +56,7 @@ app.delete("/api/produtos/:id", function (req, res) {
 // Inicializa o servidor HTTP na porta 3000
 const port = process.env.PORT || 3000;
 const server = "127.0.0.1";
+
 app.listen(port, function () {
   console.log(`Servidor rodando em http://${server}:${port}`);
 });
