@@ -2,20 +2,23 @@
   "name": "exercicio-1",
   "version": "1.0.0",
   "description": "",
-  "main": "api/server.js",
+  "main": "src/api.js",
   "engines": {
     "node": "14.x"
   },
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node api/server.js"
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "netlify-lambda": "^1.4.3",
+    "serverless-http": "^1.9.1",
     "express": "^4.18.2"
   },
   "devDependencies": {
