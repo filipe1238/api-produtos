@@ -58,8 +58,8 @@ app.delete("/api/produtos/:id", function (req, res) {
 
 // Inicializa o servidor HTTP na porta 3000
 const port = process.env.PORT || 3000;
-const server = "127.0.0.1";
+const server = "0.0.0.0";
 
-app.listen(port, function () {
-  console.log(`Servidor rodando em http://${server}:${port}`);
+app.listen(port, server , function () {
+  console.log(`Servidor rodando em http://localhost:${port}`);
 });
