@@ -2,14 +2,14 @@
   "name": "exercicio-1",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "api/server.js",
   "engines": {
     "node": "14.x"
   },
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node api/server.js"
   },
   "keywords": [],
   "author": "",
