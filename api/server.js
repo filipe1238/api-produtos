@@ -58,20 +58,22 @@ app.delete("/api/produtos/:id", function (req, res) {
   }
 });
 
+app.get("/api/*", function (req, res) {
+  res.status(404).json({ message: "Endpoint não encontrado" });
+});
+
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
   console.error(err.message, err.stack);
-  res.status(statusCode).json({'message': err.message});
-  
+  res.status(statusCode).json({ message: err.message });
+
   return;
 });
-
-
 
 // Inicializa o servidor HTTP na porta 3000
 const port = process.env.PORT || 3000;
 const server = "0.0.0.0";
 
-app.listen(port, server , function () {
+app.listen(port, server, function () {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
