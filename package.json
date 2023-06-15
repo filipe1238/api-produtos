@@ -4,9 +4,8 @@
   "description": "",
   "main": "api/server.js",
   "engines": {
-      "node": "14.x"
-    },
-  "type": "module",
+    "node": "14.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node api/server.js"
@@ -16,7 +15,9 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "knex": "^2.4.2",
+    "sqlite3": "^5.1.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"

@@ -1,6 +1,6 @@
 // lista de produtos com id, descricao, preco e marca
 let  produtos = [];
-export default produtos = [
+produtos = [
   { id: 1, descricao: "Mouse", preco: 20.0, marca: "Clone" },
   { id: 2, descricao: "Teclado", preco: 50.0, marca: "Clone" },
   { id: 3, descricao: "Monitor", preco: 450.0, marca: "AOC" },
@@ -22,3 +22,5 @@ export default produtos = [
   { id: 19, descricao: "Placa de Vídeo", preco: 350.0, marca: "Asus" },
   { id: 20, descricao: "Placa de Vídeo", preco: 620.0, marca: "Asus" },
 ];
+
+module.exports = produtos;
