@@ -15,7 +15,7 @@ app.use(
 app.get("/", function (req, res) {
   res.send(`Servidor rodando com Express, repositorio git: <a href="https://github.com/filipe1238/api-produtos" target="_blank">GitHub page</a> <br/> `+
   "endpoints da atividade 1: GET /api/produtos GET /api/produtos/:id POST /api/produtos/ PUT /api/produtos/:id DELETE /api/produtos/:id <br/>"+
-  "endpoints da atividade 2: GET /api/v1/produtos GET /api/v1/produtos/:id POST /api/v1/produtos/ PATCH /api/v1/produtos/:id PUT /api/v1/produtos/:id DELETE /api/v1/produtos/:id <br/>"+
+  "endpoints da atividade 2: GET /api/v1/produtos GET /api/v1/produtos/:id POST /api/v1/produtos/ PATCH /api/v1/produtos/:id PUT /api/v1/produtos/:id DELETE /api/v1/produtos/:id <br/>");
 });
 
 app.use("/api/v1", routerAPI2);
