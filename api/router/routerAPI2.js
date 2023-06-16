@@ -57,7 +57,7 @@ routerAPI.put("/produtos/:id", function (req, res) {
   const id = req.params.id;
   const produto = req.body;
   knex("produtos")
-    .insert(produto)
+    .update(produto)
     .where("id", id)
     .then((dados) => {
       if (!dados) {
@@ -70,6 +70,7 @@ routerAPI.put("/produtos/:id", function (req, res) {
       res.status(400).json({ message: err.message });
     });
 });
+
 
 routerAPI.patch("/produtos/:id", function (req, res) {
   const id = req.params.id;
